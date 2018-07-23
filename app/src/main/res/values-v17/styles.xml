@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--<style name="ActionButtonStyle" parent="Widget.AppCompat.ActionButton">-->
+        <!--<item name="android:minWidth">0dp</item>-->
+        <!--<item name="android:maxWidth">180dp</item>-->
+        <!--<item name="android:paddingLeft">0dp</item>-->
+        <!--<item name="android:paddingRight">0dp</item>-->
+        <!--<item name="android:paddingStart">-35dp</item>-->
+        <!--<item name="android:paddingEnd">60dp</item>-->
+    <!--</style>-->
+
+    <style name="FullscreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+    </style>
+
+
+</resources>

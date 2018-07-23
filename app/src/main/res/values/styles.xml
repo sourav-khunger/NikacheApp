@@ -1,0 +1,68 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+
+        <item name="colorPrimary">#ffffff</item>
+        <item name="colorPrimaryDark">#ffffff</item>
+        <item name="colorAccent">#ffffff</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="AppLoginTheme" parent="Theme.AccountKit">
+        <item name="com_accountkit_background_color">#ffffff</item>
+        <item name="com_accountkit_text_color">@color/ak_text</item>
+        <item name="com_accountkit_button_background_color">@color/colorPrimary</item>
+        <item name="com_accountkit_button_pressed_background_color">@color/ak_buttonPressedBackground</item>
+        <item name="com_accountkit_button_text_color">@color/ak_buttonText</item>
+        <item name="com_accountkit_input_background_color">@color/ak_inputBackground</item>
+        <item name="com_accountkit_input_text_color">@color/ak_inputText</item>
+        <item name="com_accountkit_status_bar_color">@color/colorPrimaryDark</item>
+        <item name="com_accountkit_icon_color">@color/colorPrimary</item>
+    </style>
+
+
+    <style name="FullscreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+    </style>
+
+    <!--<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />-->
+
+    <!--this will reduce space between actionBar Icons-->
+    <!--<style name="ActionButtonStyle" parent="Widget.AppCompat.ActionButton">-->
+        <!--<item name="android:minWidth">0dp</item>-->
+        <!--<item name="android:maxWidth">180dp</item>-->
+        <!--<item name="android:paddingLeft">35dp</item>-->
+        <!--<item name="android:paddingRight">60dp</item>-->
+    <!--</style>-->
+
+    <!--<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />-->
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+
+    </style>
+
+
+
+
+
+</resources>

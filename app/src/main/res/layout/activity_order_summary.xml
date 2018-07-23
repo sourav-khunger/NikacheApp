@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    tools:context=".OrderSummary">
+
+    <ScrollView
+        android:id="@+id/scroll_view_order_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="1000dp"
+            android:maxHeight="8000dp">
+
+            <TextView
+                android:id="@+id/tv_delivery_add_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#595c63"
+                android:text="DELIVERY ADDRESS"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="30dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="20dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_delivery_add_label"
+                android:layout_marginTop="15dp"
+                app:cardBackgroundColor="#f7fdd0"
+                >
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_order_summary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_marginLeft="5dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_user_name_order_summary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Sunil Kumar"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintLeft_toLeftOf="@+id/checkbox_order_summary"
+                        android:layout_marginLeft="50dp"
+                        android:textColor="#333333"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tv_user_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Indira Colony, Near Shivalik Garden, Manimajra,\nChandigarh"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_user_name_order_summary"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintLeft_toLeftOf="@+id/checkbox_order_summary"
+                        android:layout_marginLeft="50dp"
+                        android:textColor="#71745f"/>
+
+                    <TextView
+                        android:id="@+id/tv_user_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Chandigarh"
+                        app:layout_constraintTop_toBottomOf="@id/tv_user_add"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintLeft_toLeftOf="@+id/checkbox_order_summary"
+                        android:layout_marginLeft="50dp"
+                        android:textColor="#71745f"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_first_comma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text=","
+                        app:layout_constraintLeft_toRightOf="@+id/tv_user_city"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_user_add"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#71745f"/>
+
+                    <TextView
+                        android:id="@+id/tv_user_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="CHANDIGARH"
+                        app:layout_constraintTop_toBottomOf="@id/tv_user_add"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintLeft_toLeftOf="@+id/tv_first_comma"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="#71745f"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_second_comma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text=","
+                        app:layout_constraintLeft_toRightOf="@+id/tv_user_state"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_user_add"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#71745f"/>
+
+                    <TextView
+                        android:id="@+id/tv_user_pincode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="160601"
+                        app:layout_constraintTop_toBottomOf="@id/tv_user_add"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintLeft_toLeftOf="@+id/tv_second_comma"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="#71745f"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_user_mobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="8084694717"
+                        app:layout_constraintTop_toBottomOf="@id/tv_user_city"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintLeft_toLeftOf="@+id/checkbox_order_summary"
+                        android:layout_marginLeft="50dp"
+                        android:textColor="#71745f"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_user_email_order_summary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="tsunil28k@gmail.com"
+                        app:layout_constraintTop_toBottomOf="@id/tv_user_mobile"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintLeft_toLeftOf="@+id/checkbox_order_summary"
+                        android:layout_marginLeft="50dp"
+                        android:textColor="#71745f"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_default_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="(Default)"
+                        android:text="(Default)"
+                        app:layout_constraintTop_toBottomOf="@id/tv_user_email_order_summary"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintLeft_toLeftOf="@+id/checkbox_order_summary"
+                        android:layout_marginLeft="50dp"
+                        android:textColor="#084f8b"
+                        />
+
+                    <View
+                        android:id="@+id/v_first_view_order_summary"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#b6bb25"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="45dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_change_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="CHANGE ADDRESS"
+                        android:text="CHANGE ADDRESS"
+                        app:layout_constraintTop_toBottomOf="@id/v_first_view_order_summary"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintVertical_bias="0.5"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginRight="10dp"
+                        android:textColor="#084f8b"
+                        android:textStyle="bold"
+                        />
+
+
+                </android.support.constraint.ConstraintLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/bottom_card_view_order_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#dddddd"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/tv_sub_total_order_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:text="SUB TOTAL"
+                android:textColor="#595c63"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="SUB TOTAL" />
+
+            <TextView
+                android:id="@+id/tv_first_colon_order_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="125dp"
+                android:layout_marginTop="5dp"
+                android:text=":"
+                android:textColor="#595c63"
+                app:layout_constraintLeft_toRightOf="@+id/tv_sub_total_order_summary"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text=":" />
+
+            <TextView
+                android:id="@+id/tv_sub_total_price_order_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#595c63"
+                android:text="Rs. 1699"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Rs. 1699" />
+
+            <TextView
+                android:id="@+id/tv_shipping_charges_order_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="SHIPPING CHARGES"
+                android:textColor="#595c63"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_sub_total_order_summary"
+                tools:text="SHIPPING CHARGES" />
+
+            <TextView
+                android:id="@+id/tv_second_colon_order_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="10dp"
+                android:text=":"
+                android:textColor="#595c63"
+                app:layout_constraintLeft_toRightOf="@+id/tv_shipping_charges_order_summary"
+                app:layout_constraintTop_toBottomOf="@+id/tv_first_colon_order_summary"
+                tools:text=":" />
+
+            <TextView
+                android:id="@+id/tv_free_in_order_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:text="FREE"
+                android:textColor="#468311"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_sub_total_price_order_summary"
+                tools:text="FREE" />
+
+            <TextView
+                android:id="@+id/tv_pay_amt_order_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="PAY AMOUNT"
+                android:textStyle="bold"
+                android:textColor="#595c63"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_shipping_charges_order_summary"
+                tools:text="PAY AMOUNT" />
+
+            <TextView
+                android:id="@+id/tv_third_colon_order_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="107dp"
+                android:layout_marginTop="10dp"
+                android:text=":"
+                android:textColor="#595c63"
+                app:layout_constraintLeft_toRightOf="@+id/tv_pay_amt_order_summary"
+                app:layout_constraintTop_toBottomOf="@+id/tv_second_colon_order_summary"
+                tools:text=":" />
+
+            <TextView
+                android:id="@+id/tv_pay_amt_val_order_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Rs. 1699"
+                android:textColor="#595c63"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_free_in_order_summary"
+                tools:text="Rs. 1699" />
+
+            <Button
+                android:id="@+id/b_proceed_to_checkout_order_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:text="CONFIRM &amp; PAY"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/tv_pay_amt_order_summary" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+</android.support.constraint.ConstraintLayout>

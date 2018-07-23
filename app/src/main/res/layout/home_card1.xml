@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view1"
+    android:layout_width="165dp"
+    android:layout_height="230dp"
+    android:layout_gravity="center"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:elevation="4dp"
+    card_view:cardCornerRadius="2dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/fl_thumbnail1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+
+                android:id="@+id/thumbnail1"
+                android:layout_width="165dp"
+                android:layout_height="180dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                />
+
+            <RelativeLayout
+                android:id="@+id/iv_wishlist_button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end">
+
+                <include layout="@layout/wishlist_buttons" />
+
+            </RelativeLayout>
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:background="#f4f4f4">
+
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fl_thumbnail1"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:textColor="@color/product_name_color"
+                android:textSize="@dimen/product_name_size"
+                />
+
+            <TextView
+                android:id="@+id/count1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dp"
+                android:textSize="@dimen/product_price_size"
+                android:textColor="@color/product_price_color"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
+
+
+

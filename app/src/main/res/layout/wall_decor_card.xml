@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+   >
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="179dp"
+        android:layout_height="225dp"
+        android:layout_gravity="center"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:elevation="4dp"
+        card_view:cardCornerRadius="2dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           >
+
+            <FrameLayout
+                android:id="@+id/fl_thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/thumbnail"
+                    android:layout_width="179dp"
+                    android:layout_height="170dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/iv_wishlist_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|end">
+
+                    <include layout="@layout/wishlist_buttons" />
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:background="#eff0f1"
+                >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fl_thumbnail"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/product_name_color"
+                android:textSize="@dimen/product_name_size" />
+
+            <TextView
+                android:id="@+id/count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/product_price_color"
+                android:textSize="@dimen/product_price_size" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
+

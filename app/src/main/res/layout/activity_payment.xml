@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    tools:context=".Payment">
+
+    <com.doozycod.expandablecardview.ExpandableCardView
+        android:id="@+id/ec_pay_amt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="PAY AMOUNT : Rs. "
+        app:inner_view="@layout/pay_amt_detail"
+        app:expandOnClick="true"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/ec_pay_amt"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="660dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_select_payment_option"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SELECT PAYMENT OPTIONS"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                android:textColor="#595c63"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="30dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="20dp"/>
+
+
+
+        <!--<LinearLayout-->
+
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:paddingBottom="20dp"-->
+            <!--android:orientation="vertical"-->
+            <!--android:clipChildren="false"-->
+            <!--android:background="#FAFAFA">-->
+
+
+            <com.doozycod.expandablecardview.ExpandableCardView
+                android:id="@+id/creditcard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="CREDIT CARD"
+                app:icon="@drawable/credit_card"
+                app:inner_view="@layout/credit_card_detail_form"
+                app:expandOnClick="true"
+                app:layout_constraintTop_toBottomOf="@+id/tv_select_payment_option"
+                android:layout_marginTop="15dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
+
+            <com.doozycod.expandablecardview.ExpandableCardView
+                android:id="@+id/debitcard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="DEBIT CARD"
+                app:icon="@drawable/debit_card"
+                app:inner_view="@layout/debit_card_detail_form"
+                app:expandOnClick="true"
+                app:layout_constraintTop_toBottomOf="@+id/creditcard"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
+
+            <com.doozycod.expandablecardview.ExpandableCardView
+                android:id="@+id/netbanking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="NET BANKING"
+                app:icon="@drawable/net_banking"
+                app:inner_view="@layout/net_banking_detail_form"
+                app:expandOnClick="true"
+                app:layout_constraintTop_toBottomOf="@+id/debitcard"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
+
+            <com.doozycod.expandablecardview.ExpandableCardView
+                android:id="@+id/atmdebitcard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="ATM DEBIT CARD"
+                app:icon="@drawable/atm_debit_card"
+                app:inner_view="@layout/passengers"
+                app:expandOnClick="true"
+                app:layout_constraintTop_toBottomOf="@+id/netbanking"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
+
+            <com.doozycod.expandablecardview.ExpandableCardView
+                android:id="@+id/wallet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="WALLET"
+                app:icon="@drawable/wallet"
+                app:inner_view="@layout/passengers"
+                app:expandOnClick="true"
+                app:layout_constraintTop_toBottomOf="@+id/atmdebitcard"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
+
+            <com.doozycod.expandablecardview.ExpandableCardView
+                android:id="@+id/cashondelivery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="CASH ON DELIVERY"
+                app:icon="@drawable/pay"
+                app:inner_view="@layout/cash_on_delivery_detail_form"
+                app:expandOnClick="true"
+                app:layout_constraintTop_toBottomOf="@+id/wallet"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
+
+            <View
+                android:id="@+id/payment_v"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/cashondelivery"
+                android:layout_marginTop="10dp"/>
+
+            <!--</LinearLayout>-->
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>

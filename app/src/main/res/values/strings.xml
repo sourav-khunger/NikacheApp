@@ -1,0 +1,110 @@
+<resources>
+    <string name="app_name">Nikache</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string name="home_button">Home Button</string>
+    <string name="grid_item_image">Image display in the GridView as a thumbnail.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="sign_in_page">Please provide your mobile number to Login/SignUp before you place the order</string>
+
+    <string name="FACEBOOK_APP_ID">384776398684607</string>
+    <string name="ACCOUNT_KIT_CLIENT_TOKEN">3ab32733693900c2be98d5627d9da833</string>
+    <string name="ak_login_protocol_scheme">ak384776398684607</string>
+    <string name="fb_login_protocol_scheme">fb384776398684607</string>
+    <string name="login_email_label">Login with Email</string>
+    <string name="login_phone_label">Login with Phone Number</string>
+    <string name="login_facebook_label">Login with Facebook</string>
+    <string name="account">Account</string>
+    <string name="id_label">Account ID</string>
+    <string name="phone_label">Phone Number</string>
+    <string name="email_label">Email</string>
+    <string name="logout_label">Log Out</string>
+    <string name="skip_now">Skip login</string>
+
+    <string name="action_clear_all">Clear All</string>
+    <string name="action_shop_cart">Add Products</string>
+    <string name="action_wishlist">Added to wishlist</string>
+    <string name="search">Search</string>
+
+    <!-- Toolbar titles when navigation menu item is selected -->
+    <string-array name="nav_menu_items_fragment_title">
+        <item>Home</item>
+        <item>Wall Decor</item>
+        <item>Furniture</item>
+        <item>Utility Items</item>
+        <item>Bras Decor</item>
+        <item>Clocks</item>
+        <item>Antiques</item>
+        <item>Hot deal of day</item>
+        <item>Wishlist</item>
+        <item>Orders</item>
+        <item>Wallet</item>
+        <item>Track your order</item>
+        <item>Shop by category</item>
+        <item>My Account</item>
+        <item>More</item>
+        <item>Contact us</item>
+        <item>My Profile</item>
+
+    </string-array>
+
+    <string name="action_add_favourite">Add to Wishlist</string>
+    <string name="action_play_next">Add to Cart</string>
+
+    <!--array of image resource to display image over banner viewpager1-->
+    <integer-array name="banner_img_array1">
+        <item>@drawable/tubes_auto_banner_2320_729</item>
+        <item>@drawable/kitchen_auto_banner_2320_729</item>
+        <item>@drawable/home_auto_banner_dot_removed_2320_729</item>
+    </integer-array>
+
+    <!--array of image resource to display image over banner viewpager2-->
+    <integer-array name="banner_img_array">
+        <item>@drawable/kids_banner_659_549</item>
+        <item>@drawable/candace_banner_659_549</item>
+        <item>@drawable/roma_banner_659_549</item>
+    </integer-array>
+
+    <!--array of image resource to display image over banner viewpager3-->
+    <integer-array name="banner_img_array3">
+        <item>@drawable/model_sofas_banner_1019_300</item>
+        <item>@drawable/itsy_banner_1019_300</item>
+    </integer-array>
+
+    <!--- Login Page-->
+    <!--<string name="error_valid_email_password_of_user">Wrong Email or Password</string>-->
+    <!--<string name="text_accounts">All Accounts</string>-->
+    <!--<string name="hint_name">Name</string>-->
+    <!--<string name="hint_email">Email</string>-->
+    <!--<string name="hint_password">Password</string>-->
+    <!--<string name="hint_confirm_password">Confirm Password</string>-->
+    <!--<string name="text_login">Login</string>-->
+    <!--<string name="text_register">Register</string>-->
+    <!--<string name="error_message_name">Enter Full Name</string>-->
+    <!--<string name="error_message_email">Enter Valid Email</string>-->
+    <!--<string name="error_message_age">Enter Age</string>-->
+    <!--<string name="error_message_password">Enter Password</string>-->
+    <string name="success_message">Registration Successful</string>
+    <!--<string name="text_not_member">No account yet? Create one</string>-->
+    <!--<string name="text_already_member">Already a member? Login</string>-->
+    <!--<string name="error_email_exists">Email Already Exists</string>-->
+    <!--<string name="error_password_match">Password Does Not Matches</string>-->
+    <!--<string name="action_settings">Settings</string>-->
+    <!--<string name="text_hello">Hello,</string>-->
+    <!--<string name="text_title">Android Tutorials Hub</string>-->
+
+    <string-array name="num_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>Qty :</item>
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".AddAddress">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="800dp"
+        android:maxHeight="8000dp"
+       >
+
+        <TextView
+            android:id="@+id/tv_label_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:Text="Name*"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="30dp"
+            android:textColor="#9e9e9e"/>
+
+        <EditText
+            android:id="@+id/et_name_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_name"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="30dp"
+            android:hint="Name*"
+            android:textColorHint="#9e9e9e"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="30dp"/>
+
+        <TextView
+            android:id="@+id/tv_pincode_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Pin Code*"
+            android:textColor="#9e9e9e"
+            app:layout_constraintTop_toBottomOf="@+id/et_name_value"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="30dp"/>
+
+        <EditText
+            android:id="@+id/et_pincode_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pincode_header"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="30dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="30dp"
+            android:hint="Pin Code*"
+            android:textColorHint="#9e9e9e"/>
+
+        <TextView
+            android:id="@+id/tv_city_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="City*"
+            app:layout_constraintTop_toBottomOf="@+id/et_pincode_value"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="30dp"
+            android:textColor="#9e9e9e"/>
+
+        <EditText
+            android:id="@+id/et_city_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_city_header"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="30dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="30dp"
+            android:hint="City*"
+            android:textColorHint="#9e9e9e"/>
+
+        <TextView
+            android:id="@+id/tv_state_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="State*"
+            app:layout_constraintTop_toBottomOf="@+id/et_city_value"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="30dp"
+            android:textColor="#9e9e9e"/>
+
+        <EditText
+            android:id="@+id/et_state_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_state_header"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="30dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="30dp"
+            android:hint="State*"
+            android:textColorHint="#9e9e9e"/>
+
+        <TextView
+            android:id="@+id/tv_address_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Address*"
+            app:layout_constraintTop_toBottomOf="@+id/et_state_value"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="30dp"
+            android:textColor="#9e9e9e"/>
+
+        <EditText
+            android:id="@+id/et_address_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_address_header"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="30dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="30dp"
+            android:hint="Address*"
+            android:textColorHint="#9e9e9e"/>
+
+        <TextView
+            android:id="@+id/tv_email_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Email*"
+            app:layout_constraintTop_toBottomOf="@+id/et_address_value"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="30dp"
+            android:textColor="#9e9e9e"/>
+
+        <EditText
+            android:id="@+id/et_email_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_email_header"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="30dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="30dp"
+            android:hint="Email*"
+            android:textColorHint="#9e9e9e"/>
+
+        <TextView
+            android:id="@+id/tv_mobile_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Mobile*"
+            app:layout_constraintTop_toBottomOf="@+id/et_email_value"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="30dp"
+            android:textColor="#9e9e9e"/>
+
+        <EditText
+            android:id="@+id/et_mobile_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mobile_header"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="30dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="30dp"
+            android:hint="Mobile*"
+            android:textColorHint="#9e9e9e"/>
+
+        <Button
+            android:id="@+id/b_add_address"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:text="ADD ADDRESS"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@+id/et_mobile_value"
+            android:layout_marginTop="40dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"/>
+
+        <!--<view-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/b_add_address"-->
+            <!--android:layout_marginTop="40dp"/>-->
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
