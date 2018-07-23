@@ -22,6 +22,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.doozycod.nikache.Coupons;
 import com.doozycod.nikache.LoginPage;
 import com.doozycod.nikache.MainActivity;
 import com.doozycod.nikache.MyWallet;
@@ -75,7 +76,7 @@ public class MyAccountFragment extends Fragment {
     public static String TAG_CURRENT_WALLET_MONEY = "displayWalletMoneyInAccFragment";
     public static SharedPreferences sharedPref;
     public static SharedPreferences.Editor accEditor;
-
+    TextView tvCoupons;
     Toolbar toolbar;
 
     public MyAccountFragment() {
@@ -133,9 +134,12 @@ public class MyAccountFragment extends Fragment {
         tvLoginButton = (TextView)view.findViewById(R.id.tv_loginin_my_account);
         viewBetLoginAndSignUpButton = (View)view.findViewById(R.id.v_after_loginIn_in_my_acc);
         tvSignupButton = (TextView)view.findViewById(R.id.tv_signup_my_acc);
+        tvCoupons = (TextView)view.findViewById(R.id.tv_coupons);
 
         tvLoginButton.setOnClickListener(onLoginSignUpClickListener);
         tvSignupButton.setOnClickListener(onLoginSignUpClickListener);
+        tvCoupons.setOnClickListener(onCouponsClickListener);
+
 
         ivSettingMyProfile = (ImageView) view.findViewById(R.id.iv_setting_my_profile);
         ivSettingMyProfile.setOnClickListener(ivClickListner);
@@ -202,18 +206,16 @@ public class MyAccountFragment extends Fragment {
     View.OnClickListener myWalletOnClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-//            navItemIndex = 10;
-//            MainActivity.CURRENT_TAG = TAG_MY_WALLET;
-//            setToolbarTitle();
-//            myWalletFragment = null;
-//            myWalletFragment = new WalletFragment();
-//            fragmentManager = getActivity().getSupportFragmentManager();
-//            fragmentTransaction = fragmentManager.beginTransaction();
-//            fragmentTransaction.replace(R.id.content_frame, myWalletFragment,MainActivity.CURRENT_TAG);
-//            fragmentTransaction.addToBackStack(MainActivity.CURRENT_TAG);
-//            fragmentTransaction.commit();
 
             Intent intent = new Intent(getActivity(), MyWallet.class);
+            startActivity(intent);
+        }
+    };
+
+    View.OnClickListener onCouponsClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getActivity(), Coupons.class);
             startActivity(intent);
         }
     };

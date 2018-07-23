@@ -229,7 +229,9 @@
             android:name="com.razorpay.ApiKey"
             android:value="rzp_test_sp9xniHKbji5lk" />
 
-        <activity android:name=".MyWallet"></activity>
+        <activity android:name=".MyWallet" />
+        <activity android:name=".Coupons"
+            android:windowSoftInputMode="stateHidden"></activity>
     </application>
 
 </manifest>
