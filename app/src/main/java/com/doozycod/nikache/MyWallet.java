@@ -1,8 +1,6 @@
 package com.doozycod.nikache;
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.doozycod.nikache.PojoClasses.StoreCurrentWalletAmt;
 import com.razorpay.Checkout;
 import com.razorpay.PaymentResultListener;
 
@@ -30,10 +29,8 @@ public class MyWallet extends AppCompatActivity implements PaymentResultListener
     TextView tvWalletMoney;
     Float money;
     public static float moneyOnSuccess;
-    SharedPreferences sharedPref;
-    SharedPreferences.Editor editor;
     public static String TAG_WALLET_MONEY = "currentWalletMoney";
-    float currentWalletMoney;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,11 +52,7 @@ public class MyWallet extends AppCompatActivity implements PaymentResultListener
         initViews();
         setClickListener();
 
-        sharedPref = MyWallet.this.getPreferences(Context.MODE_PRIVATE);
-        editor =  sharedPref.edit();
-        moneyOnSuccess =  sharedPref.getFloat(TAG_WALLET_MONEY, 0);
-        SplashScreen.currentWalletAmt = moneyOnSuccess;
-        currentWalletMoney = SplashScreen.currentWalletAmt;
+        moneyOnSuccess = StoreCurrentWalletAmt.getDefaults(TAG_WALLET_MONEY,getApplicationContext());
 
         tvWalletMoney = (TextView) walletAmtActionBar.findViewById(R.id.tv_wallet_money);
         tvWalletMoney.setText(String.valueOf(moneyOnSuccess));
@@ -129,11 +122,9 @@ public class MyWallet extends AppCompatActivity implements PaymentResultListener
         try {
             moneyOnSuccess += money;
 
-            editor.putFloat(TAG_WALLET_MONEY, moneyOnSuccess);
+            StoreCurrentWalletAmt.setDefaults(TAG_WALLET_MONEY, moneyOnSuccess, getApplicationContext());
 
-            editor.commit();
-
-            moneyOnSuccess =  sharedPref.getFloat(TAG_WALLET_MONEY, 0);
+            moneyOnSuccess = StoreCurrentWalletAmt.getDefaults(TAG_WALLET_MONEY,getApplicationContext());
 
             tvWalletMoney.setText(String.valueOf(moneyOnSuccess));
             Toast.makeText(this, "Payment Successful: " + s, Toast.LENGTH_SHORT).show();

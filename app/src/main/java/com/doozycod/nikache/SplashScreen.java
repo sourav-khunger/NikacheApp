@@ -8,7 +8,6 @@ public class SplashScreen extends AppCompatActivity {
 
     int _splashTime = 1000; // time to display the splash screen in ms
     public static boolean isLogin = false;
-    public static float currentWalletAmt = 0;
 
 
     @Override
@@ -17,9 +16,6 @@ public class SplashScreen extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
 
         isLogin = SignUpPage.statusLogin;
-
-//        currentWalletAmt = MyWallet.moneyOnSuccess;
-//        Toast.makeText(this, "Splash: " + String.valueOf(MyWallet.moneyOnSuccess), Toast.LENGTH_SHORT).show();
 
 
         Thread splashTread = new Thread() {

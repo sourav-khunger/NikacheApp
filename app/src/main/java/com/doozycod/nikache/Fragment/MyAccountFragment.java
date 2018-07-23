@@ -21,11 +21,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.doozycod.nikache.LoginPage;
 import com.doozycod.nikache.MainActivity;
 import com.doozycod.nikache.MyWallet;
+import com.doozycod.nikache.PojoClasses.StoreCurrentWalletAmt;
 import com.doozycod.nikache.R;
 import com.doozycod.nikache.SignUpPage;
 import com.doozycod.nikache.SplashScreen;
@@ -39,6 +39,7 @@ import static com.doozycod.nikache.MainActivity.tvSolidCircleNavHeader;
 import static com.doozycod.nikache.MainActivity.tvUserNameNavHeader;
 import static com.doozycod.nikache.MainActivity.txtSignupInNavHeader;
 import static com.doozycod.nikache.MainActivity.viewBetLogInAndSignUp;
+import static com.doozycod.nikache.MyWallet.TAG_WALLET_MONEY;
 
 
 public class MyAccountFragment extends Fragment {
@@ -94,8 +95,8 @@ public class MyAccountFragment extends Fragment {
 
         databaseHelper = new NikacheDBHelper(getContext());
 
-        actionBar = ((AppCompatActivity)getActivity()).getSupportActionBar();
-        LayoutInflater inflator = (LayoutInflater) getContext() .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
+        LayoutInflater inflator = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         nikacheIconOnActionBar = inflator.inflate(R.layout.custom_imageview, null);
         actionBar.setCustomView(nikacheIconOnActionBar);
         actionBar.setTitle("My Account");
@@ -117,24 +118,14 @@ public class MyAccountFragment extends Fragment {
         TextView tvLogout = (TextView) view.findViewById(R.id.tv_logout);
         tvLogout.setOnClickListener(tvLogoutClickListner);
 
-        TextView tvShareOurApp = (TextView)view.findViewById(R.id.tv_share_our_app);
+        TextView tvShareOurApp = (TextView) view.findViewById(R.id.tv_share_our_app);
         tvShareOurApp.setOnClickListener(shareOurAppClickListener);
 
-        SplashScreen.currentWalletAmt = MyWallet.moneyOnSuccess;
-
-        if(SplashScreen.currentWalletAmt == MyWallet.moneyOnSuccess){
-//            SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
-
-
-            SharedPreferences mPrefs = getActivity().getSharedPreferences(MyWallet.TAG_WALLET_MONEY,Context.MODE_PRIVATE);
-            float walletValue = mPrefs.getFloat(MyWallet.TAG_WALLET_MONEY, 0);
-            Toast.makeText(getContext(),String.valueOf(walletValue),Toast.LENGTH_SHORT).show();
-
-
+        MyWallet.moneyOnSuccess = StoreCurrentWalletAmt.getDefaults(TAG_WALLET_MONEY,getContext());
 
             TextView tvWalletMoney = (TextView)view.findViewById(R.id.tv_wallet_money);
-            tvWalletMoney.setText(String.valueOf(SplashScreen.currentWalletAmt));
-        }
+            tvWalletMoney.setText(String.valueOf(MyWallet.moneyOnSuccess));
+
 
         //---------------------------------
 
