@@ -106,5 +106,6 @@
         <item>Qty :</item>
     </string-array>
 
+    <string name="notification_message">"New nikache from %1$s"</string>
 
 </resources>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "615696641743",
+    "firebase_url": "https://nikache-d7896.firebaseio.com",
+    "project_id": "nikache-d7896",
+    "storage_bucket": "nikache-d7896.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:615696641743:android:b433f6734453d950",
+        "android_client_info": {
+          "package_name": "com.doozycod.nikache"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "615696641743-7dfcv87ha2ipn2v2hc1hrn8n9n4f3nba.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDh4QJ1cQDJJPzvoaendFqw3bTTMRuRTdw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
